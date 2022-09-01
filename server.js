@@ -55,3 +55,10 @@ carritoRouter.post('/:id/productos', (req, res) => {
 carritoRouter.delete('/:id/productos/:id_prod', (req, res) => {
     res.json(carritoApi.borrarProducto(req.params.id, req.params.id_prod))
 }   )
+
+const PORT = 8080
+const server = app.listen(PORT, () => {
+    console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
+})
+server.on("error", error => console.log(`Error en servidor ${error}`))
+

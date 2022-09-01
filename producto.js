@@ -20,9 +20,13 @@ class producto {
                         this.id += 1
                         const newProduct = {
                         id: this.id,
+                        timestamp: Date.now(),
                         nombre: prod.nombre,
+                        descripcion: prod.descripcion,
+                        codigo: prod.codigo,
+                        foto: prod.foto,
                         precio: prod.precio,
-                        url: prod.imagenURL
+                        stock: prod.stock
                         }
                         this.productos.push(newProduct)
                         return newProduct
